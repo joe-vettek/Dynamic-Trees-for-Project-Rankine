@@ -1,0 +1,7 @@
+{
+    "parent":"dynamictrees:item/branch",
+    "textures":{
+        "bark":"rankine:block/weeping_willow_log",
+        "rings":"rankine:block/weeping_willow_log_top"
+    }
+}

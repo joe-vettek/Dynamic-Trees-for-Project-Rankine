@@ -1,0 +1,5 @@
+{
+  "primitive_soil": "rankine:loam_grass_block",
+  "acceptable_soils": [ "dirt_like"],
+  "substitute_soil": "dirt"
+}

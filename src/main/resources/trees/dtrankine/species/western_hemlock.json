@@ -1,0 +1,35 @@
+{
+  "family": "dtrankine:western_hemlock",
+  "tapering": 0.65,
+  "signal_energy": 64.0,
+  "up_probability": 6,
+  "lowest_branch_height": 15,
+  "growth_rate": 0.8,
+  "max_branch_radius": 24,
+  "soil_longevity": 15,
+  "growth_logic_kit": {
+    "name": "conifer",
+    "properties": {
+      "horizontal_limiter": 6,
+      "energy_divisor": 2
+    }
+  },
+  "leaves_properties": "dtrankine:western_hemlock",
+  "environment_factors": {
+    "cold": 0.9,
+    "hot": 0.4,
+    "dry": 0.3,
+    "forest": 1.2
+  },
+  "perfect_biomes": {
+    "types": [
+      "forest",
+      "overworld"
+    ]
+  },
+  "primitive_sapling": "rankine:western_hemlock_sapling",
+  "always_show_on_waila": false,
+  "generate_seed": true,
+  "generate_sapling": true,
+  "features": ["conifer_topper","roots","mound","clear_volume"]
+}

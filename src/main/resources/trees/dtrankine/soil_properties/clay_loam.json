@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"rankine:clay_loam",
+    "acceptable_soils":[
+        "dirt_like"
+    ]
+}

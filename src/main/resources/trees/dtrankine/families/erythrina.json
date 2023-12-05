@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:erythrina",
+    "common_species":"dtrankine:erythrina",
+    "primitive_log":"rankine:erythrina_log",
+    "primitive_stripped_log":"rankine:stripped_erythrina_log",
+    "max_branch_radius":8
+}

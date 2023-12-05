@@ -1,0 +1,8 @@
+{
+    "parent":"dynamictrees:block/smartmodel/sapling",
+    "textures":{
+        "particle":"rankine:block/sharinga_leaves",
+        "log":"rankine:block/sharinga_log",
+        "leaves":"rankine:block/sharinga_leaves"
+    }
+}

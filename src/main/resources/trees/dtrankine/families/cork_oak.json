@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:cork_oak",
+    "common_species":"dtrankine:cork_oak",
+    "primitive_log":"rankine:cork_oak_log",
+    "primitive_stripped_log":"rankine:stripped_cork_oak_log",
+    "max_branch_radius":8
+}

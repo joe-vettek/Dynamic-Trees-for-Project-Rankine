@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:yellow_birch",
+    "common_species":"dtrankine:yellow_birch",
+    "primitive_log":"rankine:yellow_birch_log",
+    "primitive_stripped_log":"rankine:stripped_yellow_birch_log",
+    "max_branch_radius":8
+}

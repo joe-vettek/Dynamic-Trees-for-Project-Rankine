@@ -1,0 +1,5 @@
+{
+    "primitive_leaves":"rankine:western_hemlock_leaves",
+    "type":"dtrankine:rankine_trees",
+    "cell_kit": "dynamictrees:conifer"
+}

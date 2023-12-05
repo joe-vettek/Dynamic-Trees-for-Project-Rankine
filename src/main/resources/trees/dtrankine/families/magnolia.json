@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:magnolia",
+    "common_species":"dtrankine:magnolia",
+    "primitive_log":"rankine:magnolia_log",
+    "primitive_stripped_log":"rankine:stripped_magnolia_log",
+    "max_branch_radius":8
+}

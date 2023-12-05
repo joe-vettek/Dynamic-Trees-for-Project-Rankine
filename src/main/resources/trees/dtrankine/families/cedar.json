@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:cedar",
+    "common_species":"dtrankine:cedar",
+    "primitive_log":"rankine:cedar_log",
+    "primitive_stripped_log":"rankine:stripped_cedar_log",
+    "max_branch_radius":8
+}

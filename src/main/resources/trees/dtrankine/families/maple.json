@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:maple",
+    "common_species":"dtrankine:maple",
+    "primitive_log":"rankine:maple_log",
+    "primitive_stripped_log":"rankine:stripped_maple_log",
+    "max_branch_radius":8
+}

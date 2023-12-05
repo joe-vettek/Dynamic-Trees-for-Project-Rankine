@@ -1,0 +1,6 @@
+{
+    "loader":"dynamictrees:root",
+    "textures":{
+        "bark":"rankine:block/coconut_palm_log"
+    }
+}

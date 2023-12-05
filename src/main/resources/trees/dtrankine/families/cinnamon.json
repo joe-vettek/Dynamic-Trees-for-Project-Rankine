@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:cinnamon",
+    "common_species":"dtrankine:cinnamon",
+    "primitive_log":"rankine:cinnamon_log",
+    "primitive_stripped_log":"rankine:stripped_cinnamon_log",
+    "max_branch_radius":8
+}

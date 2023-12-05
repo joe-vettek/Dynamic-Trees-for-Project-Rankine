@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:honey_locust",
+    "common_species":"dtrankine:honey_locust",
+    "primitive_log":"rankine:honey_locust_log",
+    "primitive_stripped_log":"rankine:stripped_honey_locust_log",
+    "max_branch_radius":8
+}

@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:juniper",
+    "common_species":"dtrankine:juniper",
+    "primitive_log":"rankine:juniper_log",
+    "primitive_stripped_log":"rankine:stripped_juniper_log",
+    "max_branch_radius":8
+}

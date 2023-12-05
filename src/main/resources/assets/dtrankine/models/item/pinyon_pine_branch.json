@@ -1,0 +1,7 @@
+{
+    "parent":"dynamictrees:item/branch",
+    "textures":{
+        "bark":"rankine:block/pinyon_pine_log",
+        "rings":"rankine:block/pinyon_pine_log_top"
+    }
+}

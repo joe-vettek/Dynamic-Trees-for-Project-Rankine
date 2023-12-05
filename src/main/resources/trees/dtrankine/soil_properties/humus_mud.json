@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"rankine:humus_mud",
+    "acceptable_soils":[
+        "dirt_like"
+    ]
+}

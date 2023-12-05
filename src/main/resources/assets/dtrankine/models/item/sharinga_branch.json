@@ -1,0 +1,7 @@
+{
+    "parent":"dynamictrees:item/branch",
+    "textures":{
+        "bark":"rankine:block/sharinga_log",
+        "rings":"rankine:block/sharinga_log_top"
+    }
+}

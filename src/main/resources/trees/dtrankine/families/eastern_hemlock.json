@@ -1,0 +1,9 @@
+{
+    "common_leaves":"dtrankine:eastern_hemlock",
+    "common_species":"dtrankine:eastern_hemlock",
+    "primitive_log":"rankine:eastern_hemlock_log",
+    "primitive_stripped_log":"rankine:stripped_eastern_hemlock_log",
+    "max_branch_radius":24,
+    "generate_surface_root": true,
+    "conifer_variants": true
+}

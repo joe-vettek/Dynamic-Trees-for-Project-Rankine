@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "dtrankine:balsam_fir_seed",
+    "dtrankine:black_birch_seed",
+    "dtrankine:black_walnut_seed",
+    "dtrankine:cedar_seed",
+    "dtrankine:cinnamon_seed",
+    "dtrankine:coconut_palm_seed",
+    "dtrankine:cork_oak_seed",
+    "dtrankine:eastern_hemlock_seed",
+    "dtrankine:erythrina_seed",
+    "dtrankine:honey_locust_seed",
+    "dtrankine:juniper_seed",
+    "dtrankine:magnolia_seed",
+    "dtrankine:maple_seed",
+    "dtrankine:pinyon_pine_seed",
+    "dtrankine:red_birch_seed",
+    "dtrankine:sharinga_seed",
+    "dtrankine:weeping_willow_seed",
+    "dtrankine:western_hemlock_seed",
+    "dtrankine:yellow_birch_seed"
+  ]
+}

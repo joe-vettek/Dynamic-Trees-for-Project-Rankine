@@ -1,0 +1,40 @@
+{
+    "family":"dtrankine:balsam_fir",
+    "tapering":0.3,
+    "signal_energy":12.0,
+    "up_probability":1.5,
+    "lowest_branch_height":1,
+    "growth_rate":0.8,
+    "max_branch_radius":5,
+    "soil_longevity":8,
+    "growth_logic_kit": {
+        "name": "conifer",
+        "properties": {
+            "horizontal_limiter": 1,
+            "energy_divisor": 2
+        }
+    },
+    "leaves_properties":"dtrankine:balsam_fir",
+    "environment_factors":{
+        "cold":1.0,
+        "hot":0.5,
+        "dry":0.6,
+        "forest":1.1
+    },
+    "perfect_biomes":{
+        "types":[
+            "forest",
+            "overworld"
+        ]
+    },
+    "primitive_sapling":"rankine:balsam_fir_sapling",
+    "always_show_on_waila":false,
+    "generate_seed":false,
+    "generate_sapling":true,
+    "common_override":{
+        "types":[
+            "extreme_hills"
+        ]
+    },
+    "features": ["conifer_topper"]
+}

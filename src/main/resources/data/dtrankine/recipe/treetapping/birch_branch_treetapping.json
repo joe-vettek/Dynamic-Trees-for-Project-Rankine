@@ -1,0 +1,11 @@
+{
+    "type":"rankine:treetapping",
+    "tapTime":400,
+    "input":{
+        "item":"dynamictrees:birch_branch"
+    },
+    "result":{
+        "fluid":"minecraft:water",
+        "amount":200
+    }
+}

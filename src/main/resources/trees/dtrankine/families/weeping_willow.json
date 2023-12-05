@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:weeping_willow",
+    "common_species":"dtrankine:weeping_willow",
+    "primitive_log":"rankine:weeping_willow_log",
+    "primitive_stripped_log":"rankine:stripped_weeping_willow_log",
+    "max_branch_radius":8
+}

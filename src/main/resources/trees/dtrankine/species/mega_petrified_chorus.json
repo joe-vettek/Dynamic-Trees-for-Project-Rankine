@@ -1,0 +1,22 @@
+{
+  "family": "dtrankine:petrified_chorus",
+  "tapering": 0.8,
+  "signal_energy": 18.0,
+  "up_probability": 1.5,
+  "lowest_branch_height": 5,
+  "growth_rate": 2.0,  "growth_logic_kit": {
+  "name": "dtrankine:bifurcated",
+  "properties": {
+    "turning_height": 6,
+    "turning_length": 0
+  }
+},
+  "leaves_properties": "bare",
+  "can_bone_meal_tree": false,
+  "acceptable_soils": [
+    "end_like"
+  ],
+  "always_show_on_waila": true,
+  "generate_seed": false,
+  "generate_sapling": false
+}

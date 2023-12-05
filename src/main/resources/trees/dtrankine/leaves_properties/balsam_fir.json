@@ -1,0 +1,5 @@
+{
+    "primitive_leaves":"rankine:balsam_fir_leaves",
+    "type":"dtrankine:rankine_trees",
+    "cell_kit": "dynamictrees:conifer"
+}

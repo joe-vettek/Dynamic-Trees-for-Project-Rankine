@@ -1,0 +1,313 @@
+[
+  {
+    "__comment": "Cancel standard tree features from the overworld.",
+    "select": {
+      "name": "minecraft:.*"
+    },
+    "cancellers": {
+      "types": [
+        "tree"
+      ],
+      "namespaces": [
+        "minecraft",
+        "rankine"
+      ]
+    }
+  },
+  {
+    "select": {
+      "name": "minecraft:wooded_mountains"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:balsam_fir": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "category": "extreme_hills"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:short_balsam_fir": 1,
+          "...": 3
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "beach"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:coconut_palm": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "names_or": [
+        "minecraft:dark_forest",
+        "minecraft:dark_forest_hills"
+      ]
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:black_walnut": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "name": "minecraft:wooded_mountains"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:red_birch": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "names_or": [
+        "minecraft:giant_tree_taiga",
+        "minecraft:giant_spruce_taiga"
+      ]
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:eastern_hemlock": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "names_or": [
+        "minecraft:giant_tree_taiga_hills",
+        "minecraft:giant_spruce_taiga_hills"
+      ]
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:western_hemlock": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "OR": [
+        {
+          "type": "river"
+        },
+        {
+          "names_or": [
+            "minecraft:birch_forest",
+            "minecraft:tall_birch_forest",
+            "minecraft:birch_forest_hills"
+          ]
+        }
+      ]
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:black_birch": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "forest"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:yellow_birch": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "forest"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dynamictrees:birch": 1,
+          "...": 3
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "names_or": [
+        "minecraft:end_barrens",
+        "minecraft:end_midlands",
+        "minecraft:end_highlands",
+        "minecraft:small_end_islands",
+        "minecraft:the_end"
+      ]
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:petrified_chorus": 2,
+          "dtrankine:mega_petrified_chorus": 1,
+          "...": 7
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "savanna"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:pinyon_pine": 1,
+          "dtrankine:juniper": 1,
+          "...": 4
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "mesa"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:erythrina": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "river"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:magnolia": 1,
+          "...": 2
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "category": "taiga"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:cedar": 1,
+          "...": 100
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "plains"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:honey_locust": 1,
+          "...": 10
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "swamp"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:weeping_willow": 1,
+          "...": 4
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "forest"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:maple": 1,
+          "...": 4
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "type": "jungle"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtrankine:sharinga": 1,
+          "dtrankine:cork_oak": 1,
+          "dtrankine:cinnamon": 1,
+          "...": 100
+        }
+      }
+    }
+  }
+]

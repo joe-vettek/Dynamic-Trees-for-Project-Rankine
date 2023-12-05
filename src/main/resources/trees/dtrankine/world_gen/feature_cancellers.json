@@ -1,0 +1,10 @@
+[
+  {
+    "__comment": "Just Test.",
+    "select": { "name": "minecraft:.*", "tag": "#minecraft:is_overworld" },
+    "cancellers": {
+      "type": "base_trees",
+      "namespace": "fruittrees"
+    }
+  }
+]

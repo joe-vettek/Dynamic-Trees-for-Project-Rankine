@@ -1,0 +1,7 @@
+{
+  "common_leaves": "bare",
+  "common_species": "dtrankine:petrified_chorus",
+  "primitive_log": "rankine:petrified_chorus_log",
+  "primitive_stripped_log": "rankine:stripped_petrified_chorus_log",
+  "max_branch_radius": 8
+}

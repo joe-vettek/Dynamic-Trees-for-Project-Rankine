@@ -1,0 +1,7 @@
+{
+    "loader":"dynamictrees:branch",
+    "textures":{
+        "bark":"rankine:block/black_walnut_log",
+        "rings":"rankine:block/black_walnut_log_top"
+    }
+}

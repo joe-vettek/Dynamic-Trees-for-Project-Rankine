@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "dtrankine:stripped_balsam_fir_branch",
+    "dtrankine:stripped_black_birch_branch",
+    "dtrankine:stripped_black_walnut_branch",
+    "dtrankine:stripped_cedar_branch",
+    "dtrankine:stripped_cinnamon_branch",
+    "dtrankine:stripped_coconut_palm_branch",
+    "dtrankine:stripped_cork_oak_branch",
+    "dtrankine:stripped_eastern_hemlock_branch",
+    "dtrankine:stripped_erythrina_branch",
+    "dtrankine:stripped_honey_locust_branch",
+    "dtrankine:stripped_juniper_branch",
+    "dtrankine:stripped_magnolia_branch",
+    "dtrankine:stripped_maple_branch",
+    "dtrankine:stripped_petrified_chorus_branch",
+    "dtrankine:stripped_pinyon_pine_branch",
+    "dtrankine:stripped_red_birch_branch",
+    "dtrankine:stripped_sharinga_branch",
+    "dtrankine:stripped_weeping_willow_branch",
+    "dtrankine:stripped_western_hemlock_branch",
+    "dtrankine:stripped_yellow_birch_branch"
+  ]
+}

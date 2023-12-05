@@ -1,0 +1,8 @@
+{
+    "common_leaves":"dtrankine:balsam_fir",
+    "common_species":"dtrankine:balsam_fir",
+    "primitive_log":"rankine:balsam_fir_log",
+    "primitive_stripped_log":"rankine:stripped_balsam_fir_log",
+    "max_branch_radius":8,
+    "conifer_variants": true
+}

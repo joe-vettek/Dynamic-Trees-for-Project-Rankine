@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:pinyon_pine",
+    "common_species":"dtrankine:pinyon_pine",
+    "primitive_log":"rankine:pinyon_pine_log",
+    "primitive_stripped_log":"rankine:stripped_pinyon_pine_log",
+    "max_branch_radius":8
+}

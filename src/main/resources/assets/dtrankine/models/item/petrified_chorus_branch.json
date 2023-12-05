@@ -1,0 +1,7 @@
+{
+    "parent":"dynamictrees:item/branch",
+    "textures":{
+        "bark":"rankine:block/petrified_chorus_log",
+        "rings":"rankine:block/petrified_chorus_log_top"
+    }
+}

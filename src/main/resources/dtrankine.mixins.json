@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "xueluoanping.dtrankine.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "dtrankine.refmap.json",
+  "mixins": [
+    "MixinLocustSpineBlock",
+    "MixinWillowBranchletBlock",
+    "MixinWillowBranchletTopBlock"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

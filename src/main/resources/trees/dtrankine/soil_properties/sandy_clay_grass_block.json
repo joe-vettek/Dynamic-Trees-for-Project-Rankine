@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"rankine:sandy_clay_grass_block",
+    "acceptable_soils":[
+        "dirt_like"
+    ]
+}

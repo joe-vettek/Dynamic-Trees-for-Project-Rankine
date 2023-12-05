@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"rankine:light_gravel",
+    "acceptable_soils":[
+        "gravel_like"
+    ]
+}

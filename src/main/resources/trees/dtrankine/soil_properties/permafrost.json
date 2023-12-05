@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"rankine:permafrost",
+    "acceptable_soils":[
+        "dirt_like"
+    ]
+}

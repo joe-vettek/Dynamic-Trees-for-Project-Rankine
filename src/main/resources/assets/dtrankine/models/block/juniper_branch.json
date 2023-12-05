@@ -1,0 +1,7 @@
+{
+    "loader":"dynamictrees:branch",
+    "textures":{
+        "bark":"rankine:block/juniper_log",
+        "rings":"rankine:block/juniper_log_top"
+    }
+}

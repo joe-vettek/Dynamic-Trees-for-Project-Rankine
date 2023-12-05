@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "dtrankine:balsam_fir_leaves",
+    "dtrankine:black_birch_leaves",
+    "dtrankine:black_walnut_leaves",
+    "dtrankine:cedar_leaves",
+    "dtrankine:cinnamon_leaves",
+    "dtrankine:coconut_palm_leaves",
+    "dtrankine:cork_oak_leaves",
+    "dtrankine:eastern_hemlock_leaves",
+    "dtrankine:erythrina_leaves",
+    "dtrankine:honey_locust_leaves",
+    "dtrankine:juniper_leaves",
+    "dtrankine:magnolia_leaves",
+    "dtrankine:maple_leaves",
+    "dtrankine:pinyon_pine_leaves",
+    "dtrankine:red_birch_leaves",
+    "dtrankine:sharinga_leaves",
+    "dtrankine:weeping_willow_leaves",
+    "dtrankine:western_hemlock_leaves",
+    "dtrankine:yellow_birch_leaves"
+  ]
+}

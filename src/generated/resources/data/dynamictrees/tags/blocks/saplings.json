@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "dtrankine:balsam_fir_sapling",
+    "dtrankine:black_birch_sapling",
+    "dtrankine:black_walnut_sapling",
+    "dtrankine:cedar_sapling",
+    "dtrankine:cinnamon_sapling",
+    "dtrankine:coconut_palm_sapling",
+    "dtrankine:cork_oak_sapling",
+    "dtrankine:eastern_hemlock_sapling",
+    "dtrankine:erythrina_sapling",
+    "dtrankine:honey_locust_sapling",
+    "dtrankine:juniper_sapling",
+    "dtrankine:magnolia_sapling",
+    "dtrankine:maple_sapling",
+    "dtrankine:pinyon_pine_sapling",
+    "dtrankine:red_birch_sapling",
+    "dtrankine:sharinga_sapling",
+    "dtrankine:short_balsam_fir_sapling",
+    "dtrankine:weeping_willow_sapling",
+    "dtrankine:western_hemlock_sapling",
+    "dtrankine:yellow_birch_sapling"
+  ]
+}

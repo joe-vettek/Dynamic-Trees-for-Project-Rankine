@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"rankine:black_sand",
+    "acceptable_soils":[
+        "sand_like"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:black_walnut",
+    "common_species":"dtrankine:black_walnut",
+    "primitive_log":"rankine:black_walnut_log",
+    "primitive_stripped_log":"rankine:stripped_black_walnut_log",
+    "max_branch_radius":8
+}

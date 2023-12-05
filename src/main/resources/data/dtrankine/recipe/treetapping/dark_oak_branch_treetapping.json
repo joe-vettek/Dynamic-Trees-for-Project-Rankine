@@ -1,0 +1,11 @@
+{
+    "type":"rankine:treetapping",
+    "tapTime":400,
+    "input":{
+        "item":"dynamictrees:dark_oak_branch"
+    },
+    "result":{
+        "fluid":"rankine:sap",
+        "amount":200
+    }
+}

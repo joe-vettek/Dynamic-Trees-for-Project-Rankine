@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtrankine:black_birch",
+    "common_species":"dtrankine:black_birch",
+    "primitive_log":"rankine:black_birch_log",
+    "primitive_stripped_log":"rankine:stripped_black_birch_log",
+    "max_branch_radius":8
+}

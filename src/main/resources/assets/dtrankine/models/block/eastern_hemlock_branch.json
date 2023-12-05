@@ -1,0 +1,7 @@
+{
+    "loader":"dynamictrees:branch",
+    "textures":{
+        "bark":"rankine:block/eastern_hemlock_log",
+        "rings":"rankine:block/eastern_hemlock_log_top"
+    }
+}
