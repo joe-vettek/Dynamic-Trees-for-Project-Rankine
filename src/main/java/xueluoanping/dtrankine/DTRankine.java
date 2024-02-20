@@ -110,6 +110,7 @@ public class DTRankine {
         {
             StringBuilder output = new StringBuilder();
             for (Object i : x) {
+                if (i==null)output.append("null");else
                 if (i.getClass().isArray()) {
                     output.append(", [");
                     for (Object c : (int[]) i) {

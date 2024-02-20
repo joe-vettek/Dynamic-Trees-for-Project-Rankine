@@ -13,6 +13,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import xueluoanping.dtrankine.systems.DTRankineGrowthLogicKits;
+import xueluoanping.dtrankine.systems.RankineFeatureCanceller;
 import xueluoanping.dtrankine.systems.featuregen.RankineFeatures;
 import xueluoanping.dtrankine.systems.leaves.RankineLeavesProperties;
 
@@ -26,20 +27,7 @@ public class DTRankineRegistries {
     }
 
 
-    public static final FeatureCanceller FRUIT_TREES_CANCELLER = new FeatureCanceller(new ResourceLocation(DTRankine.MOD_ID, "fruittrees")) {
-        @Override
-        public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, BiomePropertySelectors.FeatureCancellations featureCancellations) {
-            // Note it not in ForgeRegistries.FEATURES
-            final ResourceLocation featureName = WorldGenRegistries.CONFIGURED_FEATURE.getKey(configuredFeature);
-            if (featureName == null) {
-                return false;
-            }
-
-           return featureCancellations.shouldCancelNamespace(featureName.getNamespace())
-                   &&(WorldGenRegistries.CONFIGURED_FEATURE.getKey(configuredFeature)+"").startsWith("fruittrees");
-        }
-
-    };
+    public static final FeatureCanceller FRUIT_TREES_CANCELLER = new RankineFeatureCanceller(new ResourceLocation(DTRankine.MOD_ID, "rankine_trees"));
 
     @SubscribeEvent
     public static void onFeatureCancellerRegistry(final RegistryEvent<FeatureCanceller> event) {
