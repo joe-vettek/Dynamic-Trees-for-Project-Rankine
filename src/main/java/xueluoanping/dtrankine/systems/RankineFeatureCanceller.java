@@ -19,13 +19,15 @@ public class RankineFeatureCanceller extends FeatureCanceller {
     public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, BiomePropertySelectors.FeatureCancellations featureCancellations) {
         // Note it not in ForgeRegistries.FEATURES
         final ResourceLocation featureName = WorldGenRegistries.CONFIGURED_FEATURE.getKey(configuredFeature);
-        DTRankine.logger(2563,ForgeRegistries.FEATURES.getKey(configuredFeature.feature), featureName, WorldGenRegistries.CONFIGURED_FEATURE.getKey(configuredFeature));
-       DTRankine.logger( RankineFeatures.ARTIST_CONK_FEATURE.get().configuredCodec());
-        if (featureName == null) {
-            return false;
-        }
+       //  DTRankine.logger(2563,ForgeRegistries.FEATURES.getKey(configuredFeature.feature), featureName, WorldGenRegistries.CONFIGURED_FEATURE.getKey(configuredFeature));
+       // DTRankine.logger( RankineFeatures.ARTIST_CONK_FEATURE.get().configuredCodec());
+       // return  featureName!=null&& ! (featureName + "").equals("dynamictrees:tree");
+       return false;
+        // if (featureName == null) {
+        //     return false;
+        // }
         // configuredFeature.feature.getClass()
-        return featureCancellations.shouldCancelNamespace(featureName.getNamespace())
-                && (WorldGenRegistries.CONFIGURED_FEATURE.getKey(configuredFeature) + "").startsWith("fruittrees");
+        // return featureCancellations.shouldCancelNamespace(featureName.getNamespace())
+        //         && (WorldGenRegistries.CONFIGURED_FEATURE.getKey(configuredFeature) + "").startsWith("fruittrees");
     }
 }

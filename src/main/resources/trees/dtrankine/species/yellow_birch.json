@@ -7,11 +7,6 @@
   "growth_rate": 0.8,
   "max_branch_radius": 8,
   "soil_longevity": 11,
-  "growth_logic_kit": {
-    "name": "birch",
-    "properties": {
-    }
-  },
   "leaves_properties": "dtrankine:yellow_birch",
   "environment_factors": {
     "cold": 0.8,

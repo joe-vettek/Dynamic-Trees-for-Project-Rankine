@@ -1,17 +1,13 @@
 [
   {
-    "__comment": "Cancel standard tree features from the overworld.",
+    "__comment": "Cancel standard tree features from the end.",
     "select": {
-      "name": "minecraft:.*"
+      "name": "minecraft.*",
+      "type": "end"
     },
     "cancellers": {
-      "types": [
-        "tree"
-      ],
-      "namespaces": [
-        "minecraft",
-        "rankine"
-      ]
+      "type": "tree",
+      "namespace": "minecraft"
     }
   },
   {
@@ -275,7 +271,7 @@
         "method": "splice_before",
         "random": {
           "dtrankine:weeping_willow": 1,
-          "...": 4
+          "...": 10
         }
       }
     }
