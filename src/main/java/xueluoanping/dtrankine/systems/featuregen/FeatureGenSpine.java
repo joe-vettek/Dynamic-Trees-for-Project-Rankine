@@ -1,6 +1,7 @@
 package xueluoanping.dtrankine.systems.featuregen;
 
 import com.cannolicatfish.rankine.blocks.LocustSpineBlock;
+import com.cannolicatfish.rankine.init.Config;
 import com.ferreusveritas.dynamictrees.api.configurations.ConfigurationProperty;
 import com.ferreusveritas.dynamictrees.blocks.branches.BranchBlock;
 import com.ferreusveritas.dynamictrees.systems.genfeatures.GenFeature;
@@ -13,6 +14,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraftforge.common.util.Constants;
+import xueluoanping.dtrankine.DTRankine;
 import xueluoanping.dtrankine.util.RegisterFinderUtil;
 
 import java.util.Random;
@@ -77,6 +79,7 @@ public class FeatureGenSpine extends GenFeature {
     @Override
     protected boolean postGrow(GenFeatureConfiguration configuration, PostGrowContext context) {
 
+        // DTRankine.logger( Config.MISC_WORLDGEN.RANKINE_TREES.get());
         final IWorld world = context.world();
         final Random random = context.random();
         BlockPos offPos = context.pos();

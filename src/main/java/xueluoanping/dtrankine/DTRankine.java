@@ -1,5 +1,6 @@
 package xueluoanping.dtrankine;
 
+import com.cannolicatfish.rankine.init.Config;
 import com.ferreusveritas.dynamictrees.api.registry.RegistryHandler;
 import com.ferreusveritas.dynamictrees.blocks.leaves.DynamicLeavesBlock;
 import com.ferreusveritas.dynamictrees.blocks.leaves.LeavesProperties;
@@ -69,6 +70,7 @@ public class DTRankine {
         //        LOGGER.info("Got IMC {}", event.getIMCStream().
         //                map(m->m.getMessageSupplier().get()).
         //                collect(Collectors.toList()));
+        Config.MISC_WORLDGEN.RANKINE_TREES.set(false);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
