@@ -60,9 +60,9 @@ public class FeatureGenSpine extends GenFeature {
                 } else if (((BranchBlock) block).getRadius(world.getBlockState(offPos)) == 8) {// Convert grass or dirt to podzol
 
                     testAir(world, offPos, Direction.NORTH.getOpposite(), configuration);
-                    testAir(world, offPos.east(1), Direction.NORTH.getOpposite(), configuration);
-                    testAir(world, offPos.west(1), Direction.NORTH.getOpposite(), configuration);
-                    testAir(world, offPos.south(1), Direction.NORTH.getOpposite(), configuration);
+                    testAir(world, offPos.east(1), Direction.EAST.getOpposite(), configuration);
+                    testAir(world, offPos.west(1), Direction.WEST.getOpposite(), configuration);
+                    testAir(world, offPos.south(1), Direction.SOUTH.getOpposite(), configuration);
                     testAir(world, offPos.north(1), Direction.NORTH.getOpposite(), configuration);
                 } else
                     break;

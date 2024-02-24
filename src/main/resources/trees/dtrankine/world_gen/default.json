@@ -1,16 +1,5 @@
 [
   {
-    "__comment": "Cancel standard tree features from the end.",
-    "select": {
-      "name": "minecraft.*",
-      "type": "end"
-    },
-    "cancellers": {
-      "type": "tree",
-      "namespace": "minecraft"
-    }
-  },
-  {
     "select": {
       "name": "minecraft:wooded_mountains"
     },
