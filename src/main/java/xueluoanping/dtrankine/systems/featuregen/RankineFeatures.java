@@ -1,9 +1,9 @@
 package xueluoanping.dtrankine.systems.featuregen;
 
-import com.ferreusveritas.dynamictrees.api.registry.Registry;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.GenFeature;
-import net.minecraft.util.ResourceLocation;
 
+import com.ferreusveritas.dynamictrees.api.registry.Registry;
+import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
+import net.minecraft.resources.ResourceLocation;
 import xueluoanping.dtrankine.DTRankine;
 
 public class RankineFeatures {

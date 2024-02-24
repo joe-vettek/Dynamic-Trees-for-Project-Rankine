@@ -8,14 +8,15 @@ import com.ferreusveritas.dynamictrees.growthlogic.context.DirectionManipulation
 import com.ferreusveritas.dynamictrees.growthlogic.context.DirectionSelectionContext;
 import com.ferreusveritas.dynamictrees.growthlogic.context.PositionalSpeciesContext;
 import com.ferreusveritas.dynamictrees.systems.GrowSignal;
-import com.ferreusveritas.dynamictrees.trees.Species;
+import com.ferreusveritas.dynamictrees.tree.species.Species;
 import com.ferreusveritas.dynamictrees.util.CoordUtils;
 import com.ferreusveritas.dynamictrees.util.MathHelper;
-import net.minecraft.block.BlockState;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
 
 // from DTBOP
@@ -27,7 +28,7 @@ public class RedwoodLogic extends GrowthLogicKit {
 
     @Override
     public Direction selectNewDirection(GrowthLogicKitConfiguration configuration, DirectionSelectionContext context) {
-        final World world = context.world();
+        final Level level = context.level();
         final BlockPos pos = context.pos();
         final Species species = context.species();
         final GrowSignal signal = context.signal();
@@ -45,12 +46,12 @@ public class RedwoodLogic extends GrowthLogicKit {
         probMap[Direction.UP.ordinal()] = signal.dir != Direction.DOWN ? species.getUpProbability() : 0; // Favor up
         probMap[signal.dir.ordinal()] += species.getProbabilityForCurrentDir(); // Favor current direction
 
-        int radius = context.branch().getRadius(world.getBlockState(pos));
+        int radius = context.branch().getRadius(level.getBlockState(pos));
 
         if (signal.delta.getY() < configuration.getLowestBranchHeight(context) - 3) {
 
-            int treeHash = getHashedVariation(world, signal.rootPos, 2);
-            int posHash = getHashedVariation(world, pos, 2);
+            int treeHash = getHashedVariation(level, signal.rootPos, 2);
+            int posHash = getHashedVariation(level, pos, 2);
 
             int hashMod = signalY < 7 ? 3 : 11;
             boolean sideTurn = !signal.isInTrunk() ||
@@ -71,19 +72,19 @@ public class RedwoodLogic extends GrowthLogicKit {
                 // Check probability for surrounding blocks
                 // Typically Air:1, Leaves:2, Branches: 2+r
                 if (signalY >= configuration.getLowestBranchHeight(context)) {
-                    BlockState deltaBlockState = world.getBlockState(deltaPos);
+                    BlockState deltaBlockState = level.getBlockState(deltaPos);
                     TreePart treePart = TreeHelper.getTreePart(deltaBlockState);
 
                     probMap[dir.ordinal()] +=
-                            treePart.probabilityForBlock(deltaBlockState, world, deltaPos, context.branch());
+                            treePart.probabilityForBlock(deltaBlockState, level, deltaPos, context.branch());
                 }
             }
         }
 
         //Do custom stuff or override probability map for various species
         probMap = configuration.populateDirectionProbabilityMap(
-                new DirectionManipulationContext(context.world(), context.pos(), context.species(), context.branch(),
-                        context.signal(), context.branch().getRadius(context.world().getBlockState(context.pos())),
+                new DirectionManipulationContext(context.level(), context.pos(), context.species(), context.branch(),
+                        context.signal(), context.branch().getRadius(context.level().getBlockState(context.pos())),
                         probMap)
         );
 
@@ -126,7 +127,7 @@ public class RedwoodLogic extends GrowthLogicKit {
                 context.species().getUpProbability() : 1;
         probMap[originDir.ordinal()] = 0; // Disable the direction we came from
 
-        if (signal.numTurns == 1 && signal.delta.distSqr(0, signal.delta.getY(), 0, true) == 1.0) {
+        if (signal.numTurns == 1 && signal.delta.distSqr(new Vec3i(0, signal.delta.getY(), 0))==1) {
             probMap[1] =
                     0; //disable up if we JUST turned out of the trunk, this is to prevent branches from interfering at the tip
         }
@@ -136,7 +137,7 @@ public class RedwoodLogic extends GrowthLogicKit {
 
     @Override
     public float getEnergy(GrowthLogicKitConfiguration configuration, PositionalSpeciesContext context) {
-        final World world = context.world();
+        final Level level = context.level();
         final BlockPos pos = context.pos();
         final Species species = context.species();
         // Vary the height energy by a psuedorandom hash function
@@ -145,21 +146,21 @@ public class RedwoodLogic extends GrowthLogicKit {
 
     @Override
     public int getLowestBranchHeight(GrowthLogicKitConfiguration configuration, PositionalSpeciesContext context) {
-        final World world = context.world();
+        final Level level = context.level();
         final BlockPos pos = context.pos();
         return (int) ((super.getLowestBranchHeight(configuration, context) +
-                getHashedVariation(world, pos, 2, 16) * 0.5f) *
-                context.species().biomeSuitability(world, pos));
+                getHashedVariation(level, pos, 2, 16) * 0.5f) *
+                context.species().biomeSuitability(level, pos));
     }
 
-    private int getHashedVariation(World world, BlockPos pos, int readyMade) {
-        long day = world.getGameTime() / 24000L;
+    private int getHashedVariation(Level level, BlockPos pos, int readyMade) {
+        long day = level.getGameTime() / 24000L;
         int month = (int) day / 30;//Change the hashs every in-game month
         return CoordUtils.coordHashCode(pos.above(month), readyMade);
     }
 
-    private float getHashedVariation(World world, BlockPos pos, int readyMade, Integer mod) {
-        return (getHashedVariation(world, pos, readyMade) %
+    private float getHashedVariation(Level level, BlockPos pos, int readyMade, Integer mod) {
+        return (getHashedVariation(level, pos, readyMade) %
                 mod);//Vary the height energy by a psuedorandom hash function
     }
 

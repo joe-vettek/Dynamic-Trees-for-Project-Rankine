@@ -2,7 +2,7 @@ package xueluoanping.dtrankine.systems;
 
 import com.ferreusveritas.dynamictrees.api.registry.Registry;
 import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKit;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import xueluoanping.dtrankine.DTRankine;
 import xueluoanping.dtrankine.systems.growthlogic.BifurcatedTreeLogic;
 import xueluoanping.dtrankine.systems.growthlogic.CrookedPalmLogic;

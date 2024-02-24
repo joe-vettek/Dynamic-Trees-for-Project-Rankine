@@ -1,19 +1,23 @@
 package xueluoanping.dtrankine.systems.featuregen;
 
 import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.api.configurations.ConfigurationProperty;
+import com.ferreusveritas.dynamictrees.api.configuration.ConfigurationProperty;
 import com.ferreusveritas.dynamictrees.api.network.MapSignal;
-import com.ferreusveritas.dynamictrees.blocks.branches.BranchBlock;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.GenFeature;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.GenFeatureConfiguration;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.context.PostGenerationContext;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.context.PostGrowContext;
-import com.ferreusveritas.dynamictrees.systems.nodemappers.FindEndsNode;
-import net.minecraft.block.*;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
-import net.minecraftforge.common.util.Constants;
+import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
+import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
+import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeatureConfiguration;
+import com.ferreusveritas.dynamictrees.systems.genfeature.context.PostGenerationContext;
+import com.ferreusveritas.dynamictrees.systems.genfeature.context.PostGrowContext;
+import com.ferreusveritas.dynamictrees.systems.nodemapper.FindEndsNode;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.MushroomBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
@@ -45,7 +49,7 @@ public class FeatureGenFallenLeaves extends GenFeature {
 
     @Override
     protected boolean postGenerate(GenFeatureConfiguration configuration, PostGenerationContext context) {
-        final IWorld world = context.world();
+        final LevelAccessor world = context.level();
         final FindEndsNode endFinder = new FindEndsNode();
         TreeHelper.startAnalysisFromRoot(world, context.pos(), new MapSignal(endFinder));
         final List<BlockPos> endPoints = endFinder.getEnds();
@@ -98,7 +102,7 @@ public class FeatureGenFallenLeaves extends GenFeature {
     protected boolean postGrow(GenFeatureConfiguration configuration, PostGrowContext context) {
 
 
-        final IWorld world = context.world();
+        final LevelAccessor world = context.level();
         final FindEndsNode endFinder = new FindEndsNode();
         TreeHelper.startAnalysisFromRoot(world, context.pos(), new MapSignal(endFinder));
         final List<BlockPos> endPoints = endFinder.getEnds();
@@ -150,7 +154,7 @@ public class FeatureGenFallenLeaves extends GenFeature {
         return true;
     }
 
-    private void testAir(IWorld world, BlockPos pos,GenFeatureConfiguration configuration) {
+    private void testAir(LevelAccessor world, BlockPos pos,GenFeatureConfiguration configuration) {
         if (world.getBlockState(pos).getBlock() != Blocks.AIR) {
             pos = pos.above(1);
             if (world.getBlockState(pos).getBlock() instanceof BranchBlock
@@ -160,7 +164,7 @@ public class FeatureGenFallenLeaves extends GenFeature {
                     if (world.getBlockState(pos.below(1)).isCollisionShapeFullBlock(world, pos.below(1))) {
                         // random generate , maybe not
                         if (world.getRandom().nextInt(5) < 3)
-                            world.setBlock(pos, getBasicLeafBlock(configuration), Constants.BlockFlags.BLOCK_UPDATE | Constants.BlockFlags.UPDATE_NEIGHBORS);
+                            world.setBlock(pos, getBasicLeafBlock(configuration), Block.UPDATE_ALL);
                     }
             }
         }

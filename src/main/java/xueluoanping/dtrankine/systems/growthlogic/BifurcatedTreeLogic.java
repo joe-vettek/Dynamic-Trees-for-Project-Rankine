@@ -1,19 +1,18 @@
 package xueluoanping.dtrankine.systems.growthlogic;
 
-import com.cannolicatfish.rankine.blocks.tap.TreeTapBlock;
-import com.ferreusveritas.dynamictrees.api.configurations.ConfigurationProperty;
+import com.ferreusveritas.dynamictrees.api.configuration.ConfigurationProperty;
 import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKitConfiguration;
 import com.ferreusveritas.dynamictrees.growthlogic.PalmGrowthLogic;
 import com.ferreusveritas.dynamictrees.growthlogic.context.DirectionManipulationContext;
 import com.ferreusveritas.dynamictrees.systems.GrowSignal;
-import com.ferreusveritas.dynamictrees.trees.Species;
+import com.ferreusveritas.dynamictrees.tree.species.Species;
 import com.ferreusveritas.dynamictrees.util.CoordUtils;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import xueluoanping.dtrankine.DTRankine;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
+
 
 import java.util.Random;
 
@@ -50,7 +49,7 @@ public class BifurcatedTreeLogic extends PalmGrowthLogic {
     @Override
     public int[] populateDirectionProbabilityMap(GrowthLogicKitConfiguration configuration, DirectionManipulationContext context) {
         final Species species = context.species();
-        final World world = context.world();
+        final Level world = context.level();
         final GrowSignal signal = context.signal();
         final int[] probMap = context.probMap();
         final BlockPos pos = context.pos();
@@ -71,7 +70,7 @@ public class BifurcatedTreeLogic extends PalmGrowthLogic {
 
         // Disable the direction we came from
         int currentSignUsed = signal.numSteps + 1;
-        long seed=CoordUtils.coordHashCode(signal.rootPos, 3)+((ServerWorld)world).getSeed();
+        long seed=CoordUtils.coordHashCode(signal.rootPos, 3)+((ServerLevel)world).getSeed();
         Random random_pos = new Random(seed);
         int randomHeight = Math.abs(random_pos.nextInt() % 2);
         int randomW = Math.abs(random_pos.nextInt() % 3);

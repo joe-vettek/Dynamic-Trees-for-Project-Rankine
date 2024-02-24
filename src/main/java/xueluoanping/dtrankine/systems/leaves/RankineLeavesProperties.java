@@ -1,12 +1,11 @@
 package xueluoanping.dtrankine.systems.leaves;
 
-import com.cannolicatfish.rankine.blocks.WillowBranchletTopBlock;
 import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
-import com.ferreusveritas.dynamictrees.blocks.leaves.DynamicLeavesBlock;
-import com.ferreusveritas.dynamictrees.blocks.leaves.LeavesProperties;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.util.ResourceLocation;
-import xueluoanping.dtrankine.DTRankine;
+import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
+import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+
 
 public class RankineLeavesProperties extends LeavesProperties {
 
@@ -18,10 +17,8 @@ public class RankineLeavesProperties extends LeavesProperties {
 
 
     @Override
-    protected DynamicLeavesBlock createDynamicLeaves(AbstractBlock.Properties properties) {
-
+    protected DynamicLeavesBlock createDynamicLeaves(BlockBehaviour.Properties properties) {
         return new DynamicRankineLeavesBlock(this, properties) ;
-
     }
 
 }

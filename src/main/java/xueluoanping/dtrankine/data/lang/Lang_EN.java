@@ -1,8 +1,6 @@
 package xueluoanping.dtrankine.data.lang;
 
-import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import xueluoanping.dtrankine.util.RegisterFinderUtil;

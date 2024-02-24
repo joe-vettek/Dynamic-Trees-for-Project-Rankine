@@ -1,20 +1,19 @@
 package xueluoanping.dtrankine.systems.featuregen;
 
 import com.cannolicatfish.rankine.blocks.LocustSpineBlock;
-import com.cannolicatfish.rankine.init.Config;
-import com.ferreusveritas.dynamictrees.api.configurations.ConfigurationProperty;
-import com.ferreusveritas.dynamictrees.blocks.branches.BranchBlock;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.GenFeature;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.GenFeatureConfiguration;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.context.PostGenerationContext;
-import com.ferreusveritas.dynamictrees.systems.genfeatures.context.PostGrowContext;
-import net.minecraft.block.*;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
-import net.minecraftforge.common.util.Constants;
-import xueluoanping.dtrankine.DTRankine;
+
+import com.ferreusveritas.dynamictrees.api.configuration.ConfigurationProperty;
+import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
+import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
+import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeatureConfiguration;
+import com.ferreusveritas.dynamictrees.systems.genfeature.context.PostGenerationContext;
+import com.ferreusveritas.dynamictrees.systems.genfeature.context.PostGrowContext;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import xueluoanping.dtrankine.util.RegisterFinderUtil;
 
 import java.util.Random;
@@ -44,7 +43,7 @@ public class FeatureGenSpine extends GenFeature {
 
     @Override
     protected boolean postGenerate(GenFeatureConfiguration configuration, PostGenerationContext context) {
-        final IWorld world = context.world();
+        final LevelAccessor world = context.level();
 
 
         final Random random = context.random();
@@ -59,11 +58,10 @@ public class FeatureGenSpine extends GenFeature {
                     break;
                 } else if (((BranchBlock) block).getRadius(world.getBlockState(offPos)) == 8) {// Convert grass or dirt to podzol
 
-                    testAir(world, offPos, Direction.NORTH.getOpposite(), configuration);
-                    testAir(world, offPos.east(1), Direction.NORTH.getOpposite(), configuration);
-                    testAir(world, offPos.west(1), Direction.NORTH.getOpposite(), configuration);
-                    testAir(world, offPos.south(1), Direction.NORTH.getOpposite(), configuration);
-                    testAir(world, offPos.north(1), Direction.NORTH.getOpposite(), configuration);
+                    testAir(world, offPos.east(), Direction.EAST, configuration);
+                    testAir(world, offPos.west(), Direction.WEST, configuration);
+                    testAir(world, offPos.south(), Direction.SOUTH, configuration);
+                    testAir(world, offPos.north(), Direction.NORTH, configuration);
                 } else
                     break;
 
@@ -80,7 +78,7 @@ public class FeatureGenSpine extends GenFeature {
     protected boolean postGrow(GenFeatureConfiguration configuration, PostGrowContext context) {
 
         // DTRankine.logger( Config.MISC_WORLDGEN.RANKINE_TREES.get());
-        final IWorld world = context.world();
+        final LevelAccessor world = context.level();
         final Random random = context.random();
         BlockPos offPos = context.pos();
         for (int i = 0; i < 32; i++) {
@@ -93,7 +91,6 @@ public class FeatureGenSpine extends GenFeature {
                     break;
                 } else if (((BranchBlock) block).getRadius(world.getBlockState(offPos)) == 8) {// Convert grass or dirt to podzol
 
-                    testAir(world, offPos, Direction.NORTH.getOpposite(), configuration);
                     if (world.getRandom().nextInt(4) ==0)
                         testAir(world, offPos.east(),Direction.EAST, configuration);
                     if (world.getRandom().nextInt(4) ==0)
@@ -114,11 +111,11 @@ public class FeatureGenSpine extends GenFeature {
         return true;
     }
 
-    private void testAir(IWorld world, BlockPos pos, Direction opposite, GenFeatureConfiguration configuration) {
+    private void testAir(LevelAccessor world, BlockPos pos, Direction opposite, GenFeatureConfiguration configuration) {
         if (world.isEmptyBlock(pos)) {
             // random generate , maybe not
             if (world.getRandom().nextInt(5) < 3)
-                world.setBlock(pos, getSpineBlock(configuration).setValue(LocustSpineBlock.FACING, opposite), Constants.BlockFlags.BLOCK_UPDATE | Constants.BlockFlags.UPDATE_NEIGHBORS);
+                world.setBlock(pos, getSpineBlock(configuration).setValue(LocustSpineBlock.FACING, opposite), Block.UPDATE_ALL);
         }
 
     }
